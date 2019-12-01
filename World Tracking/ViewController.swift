@@ -27,27 +27,26 @@ class ViewController: UIViewController {
     
     
     @IBAction func add(_ sender: Any) {
+        //let cylinderNode = SCNNode(geometry: SCNCylinder(radius: 0.05, height: 0.05))
+        //cylinderNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+        let doorNode = SCNNode(geometry: SCNPlane(width: 0.03, height: 0.06))
+        doorNode.geometry?.firstMaterial?.diffuse.contents = UIColor.green
+        let boxNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
+        boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         let node = SCNNode()
-        
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: 0, y: 0))
-        path.addLine(to: CGPoint(x: 0, y: 0.2))
-        path.addLine(to: CGPoint(x: 0.2, y: 0.3))
-        path.addLine(to: CGPoint(x: 0.4, y: 0.2))
-        path.addLine(to: CGPoint(x: 0.4, y: 0))
-        let shape = SCNShape(path: path, extrusionDepth: 0.2)
-        node.geometry = shape
 //        node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
 //        node.geometry = SCNCapsule(capRadius: 0.1/2 ,height: 0.3/2)
 //        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.1/4)
+        node.geometry = SCNPyramid(width: 0.1, height: 0.08, length: 0.1)
         node.geometry?.firstMaterial?.specular.contents = UIColor.white
-        node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
-        
-//        let x = randomNumbers(firstNum: -0.3, secondNum: 0.3)
-//        let y = randomNumbers(firstNum: -0.3, secondNum: 0.3)
-//        let z = randomNumbers(firstNum: -0.3, secondNum: 0.3)
-        node.position = SCNVector3(0,0,-0.7)
+        node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+        node.position = SCNVector3(0.0,0.0,-0.2)
+        boxNode.position = SCNVector3(0,-0.05,0)
+        doorNode.position = SCNVector3(0, 0, 0.06)
         self.sceneView.scene.rootNode.addChildNode(node)
+        node.addChildNode(boxNode)
+        boxNode.addChildNode(doorNode)
+        //self.sceneView.scene.rootNode.addChildNode(cylinderNode)
     }
     
     @IBAction func reset(_ sender: Any) {
