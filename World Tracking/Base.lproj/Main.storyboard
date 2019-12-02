@@ -18,41 +18,13 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3D-fy-fo7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-pe-rmD">
-                                <rect key="frame" x="37" y="762" width="80" height="80"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="K7I-9J-yC1"/>
-                                    <constraint firstAttribute="width" constant="80" id="bmX-YG-jYP"/>
-                                </constraints>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5b-7K-bb1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krj-1c-4B5">
-                                <rect key="frame" x="314" y="762" width="80" height="80"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="bdw-bf-7fK"/>
-                                    <constraint firstAttribute="width" constant="80" id="hst-ex-hAS"/>
-                                </constraints>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycw-YI-gak"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="d3D-fy-fo7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JSS-2y-uwN"/>
                             <constraint firstItem="d3D-fy-fo7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kf8-RK-DsH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="krj-1c-4B5" secondAttribute="bottom" constant="20" id="Rw2-gJ-dEt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d3D-fy-fo7" secondAttribute="bottom" id="c8N-oc-GJ9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="krj-1c-4B5" secondAttribute="trailing" constant="20" id="dI1-aZ-7Wa"/>
-                            <constraint firstItem="PW5-pe-rmD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="eRC-ve-WKQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d3D-fy-fo7" secondAttribute="trailing" id="qm3-b0-JL8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PW5-pe-rmD" secondAttribute="bottom" constant="20" id="s5L-np-d6I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
