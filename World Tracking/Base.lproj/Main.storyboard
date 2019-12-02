@@ -18,23 +18,36 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3D-fy-fo7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzr-bi-OCu">
+                                <rect key="frame" x="130" y="747" width="154" height="85"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="Ou1-MD-AYN"/>
+                                    <constraint firstAttribute="height" constant="85" id="x80-4G-BHd"/>
+                                </constraints>
+                                <state key="normal" title="Draw"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jzr-bi-OCu" secondAttribute="bottom" constant="30" id="A6D-nY-mzY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jzr-bi-OCu" secondAttribute="trailing" constant="130" id="ExS-DP-Ogs"/>
                             <constraint firstItem="d3D-fy-fo7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JSS-2y-uwN"/>
                             <constraint firstItem="d3D-fy-fo7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kf8-RK-DsH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d3D-fy-fo7" secondAttribute="bottom" id="c8N-oc-GJ9"/>
+                            <constraint firstItem="jzr-bi-OCu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="pxV-G5-vQv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d3D-fy-fo7" secondAttribute="trailing" id="qm3-b0-JL8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="d3D-fy-fo7" id="3f6-hg-Lhc"/>
+                        <outlet property="draw" destination="jzr-bi-OCu" id="Q38-SN-fGS"/>
+                        <outlet property="sceneView" destination="d3D-fy-fo7" id="aXl-ps-Aeu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="139"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
