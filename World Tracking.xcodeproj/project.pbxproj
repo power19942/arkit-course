@@ -15,6 +15,8 @@
 		098B41492393C825007ED836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098B41472393C825007ED836 /* LaunchScreen.storyboard */; };
 		098B41542393C825007ED836 /* World_TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B41532393C825007ED836 /* World_TrackingTests.swift */; };
 		098B415F2393C825007ED836 /* World_TrackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B415E2393C825007ED836 /* World_TrackingUITests.swift */; };
+		099218E823965369006AF6D7 /* Jellyfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 099218E723965369006AF6D7 /* Jellyfish.png */; };
+		099218EE2396547E006AF6D7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 099218ED2396547E006AF6D7 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		098B415A2393C825007ED836 /* World TrackingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "World TrackingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		098B415E2393C825007ED836 /* World_TrackingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World_TrackingUITests.swift; sourceTree = "<group>"; };
 		098B41602393C825007ED836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		099218E723965369006AF6D7 /* Jellyfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jellyfish.png; sourceTree = "<group>"; };
+		099218ED2396547E006AF6D7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		098B413B2393C822007ED836 /* World Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				099218E723965369006AF6D7 /* Jellyfish.png */,
 				098B413C2393C822007ED836 /* AppDelegate.swift */,
 				098B413E2393C822007ED836 /* SceneDelegate.swift */,
 				098B41402393C822007ED836 /* ViewController.swift */,
@@ -106,6 +111,7 @@
 				098B41452393C825007ED836 /* Assets.xcassets */,
 				098B41472393C825007ED836 /* LaunchScreen.storyboard */,
 				098B414A2393C825007ED836 /* Info.plist */,
+				099218ED2396547E006AF6D7 /* art.scnassets */,
 			);
 			path = "World Tracking";
 			sourceTree = "<group>";
@@ -232,6 +238,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099218E823965369006AF6D7 /* Jellyfish.png in Resources */,
+				099218EE2396547E006AF6D7 /* art.scnassets in Resources */,
 				098B41492393C825007ED836 /* LaunchScreen.storyboard in Resources */,
 				098B41462393C825007ED836 /* Assets.xcassets in Resources */,
 				098B41442393C822007ED836 /* Main.storyboard in Resources */,
