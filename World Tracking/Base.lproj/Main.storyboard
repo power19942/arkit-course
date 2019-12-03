@@ -55,6 +55,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="play" destination="9ZA-Rd-G3E" id="kwB-Au-k5p"/>
                         <outlet property="sceneView" destination="d3D-fy-fo7" id="y1t-LE-7mN"/>
                     </connections>
                 </viewController>
