@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,21 +16,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ib-FV-vbk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nnF-89-JNR">
+                                <rect key="frame" x="0.0" y="821" width="414" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="16v-Cq-Uov"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="30" id="RrZ-ay-RQ9">
+                                    <size key="itemSize" width="171" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="item" id="dr8-z7-UiF" customClass="itetmCell" customModule="World_Tracking" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="12.5" width="171" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JD1-IN-uCy" customClass="itemCell" customModule="World_Tracking" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="171" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO5-vd-rMT">
+                                                    <rect key="frame" x="69" y="14.5" width="33.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PO5-vd-rMT" firstAttribute="centerY" secondItem="JD1-IN-uCy" secondAttribute="centerY" id="Nuc-fP-h3j"/>
+                                                <constraint firstItem="PO5-vd-rMT" firstAttribute="centerX" secondItem="JD1-IN-uCy" secondAttribute="centerX" id="bNo-Wj-cyQ"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="171" height="50"/>
+                                        <connections>
+                                            <outlet property="itemLabel" destination="PO5-vd-rMT" id="333-MA-wj0"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXS-lX-STX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="821"/>
                             </arscnView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2Ib-FV-vbk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3dX-87-hlT"/>
-                            <constraint firstAttribute="bottom" secondItem="2Ib-FV-vbk" secondAttribute="bottom" id="g7I-yT-HGs"/>
-                            <constraint firstItem="2Ib-FV-vbk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gB6-cZ-xJQ"/>
-                            <constraint firstItem="2Ib-FV-vbk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rhx-Iu-vUD"/>
+                            <constraint firstItem="jXS-lX-STX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NLz-yE-Mev"/>
+                            <constraint firstItem="nnF-89-JNR" firstAttribute="top" secondItem="jXS-lX-STX" secondAttribute="bottom" id="NOp-ah-0bU"/>
+                            <constraint firstItem="nnF-89-JNR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RB5-FZ-TbS"/>
+                            <constraint firstItem="nnF-89-JNR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="am4-ET-eDg"/>
+                            <constraint firstItem="jXS-lX-STX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="csJ-y1-OQT"/>
+                            <constraint firstAttribute="bottom" secondItem="nnF-89-JNR" secondAttribute="bottom" id="vfu-0y-ndL"/>
+                            <constraint firstItem="jXS-lX-STX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xsx-Np-D1k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="scene" destination="2Ib-FV-vbk" id="iZ1-3T-Ioc"/>
+                        <outlet property="itemCollectionView" destination="nnF-89-JNR" id="Rjj-do-Rlv"/>
+                        <outlet property="sceneView" destination="jXS-lX-STX" id="Wwb-EI-i7g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
