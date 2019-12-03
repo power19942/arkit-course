@@ -12,9 +12,15 @@ import ARKit
 class ViewController: UIViewController {
     
    
-    @IBOutlet weak var scenView: ARSCNView!
+    @IBOutlet weak var scene: ARSCNView!
+    let config = ARWorldTrackingConfiguration()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.scene.debugOptions = [
+            ARSCNDebugOptions.showFeaturePoints,
+            ARSCNDebugOptions.showWorldOrigin
+        ]
+        self.scene.session.run(config)
     }
     
 
