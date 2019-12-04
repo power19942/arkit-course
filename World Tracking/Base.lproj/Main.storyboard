@@ -59,12 +59,20 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXS-lX-STX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="821"/>
                             </arscnView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plane Detected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDn-Ju-LlV">
+                                <rect key="frame" x="144.5" y="44" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="JDn-Ju-LlV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K4b-fF-Ejb"/>
                             <constraint firstItem="jXS-lX-STX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NLz-yE-Mev"/>
                             <constraint firstItem="nnF-89-JNR" firstAttribute="top" secondItem="jXS-lX-STX" secondAttribute="bottom" id="NOp-ah-0bU"/>
                             <constraint firstItem="nnF-89-JNR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RB5-FZ-TbS"/>
+                            <constraint firstItem="JDn-Ju-LlV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zlx-nu-tm6"/>
                             <constraint firstItem="nnF-89-JNR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="am4-ET-eDg"/>
                             <constraint firstItem="jXS-lX-STX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="csJ-y1-OQT"/>
                             <constraint firstAttribute="bottom" secondItem="nnF-89-JNR" secondAttribute="bottom" id="vfu-0y-ndL"/>
@@ -74,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="itemCollectionView" destination="nnF-89-JNR" id="Rjj-do-Rlv"/>
+                        <outlet property="planeDetected" destination="JDn-Ju-LlV" id="6wm-7M-hPH"/>
                         <outlet property="sceneView" destination="jXS-lX-STX" id="Wwb-EI-i7g"/>
                     </connections>
                 </viewController>
