@@ -9,7 +9,7 @@
 import UIKit
 import ARKit
 
-class ViewController: UIViewController,UICollectionViewDataSource , UICollectionViewDelegate{
+class ViewController: UIViewController,UICollectionViewDataSource , UICollectionViewDelegate,ARSCNViewDelegate{
     
     let itemsAray:[String] = ["cup","vase","boxing","table"]
     @IBOutlet weak var itemCollectionView: UICollectionView!
@@ -22,10 +22,12 @@ class ViewController: UIViewController,UICollectionViewDataSource , UICollection
             ARSCNDebugOptions.showWorldOrigin,
             ARSCNDebugOptions.showFeaturePoints
         ]
-        self.sceneView.session.run(config)
         self.config.planeDetection = .horizontal
+        self.sceneView.session.run(config)
+        self.sceneView.delegate = self
         self.itemCollectionView.dataSource = self
         self.itemCollectionView.delegate = self
+
         self.registerGestureRecognizer()
     }
     
@@ -77,6 +79,13 @@ class ViewController: UIViewController,UICollectionViewDataSource , UICollection
         cell?.backgroundColor = UIColor.orange
     }
 
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard let planAnchore = anchor as? ARPlaneAnchor else {
+            return
+        }
+        print("new flat surface detected")
+    }
 }
 
 
