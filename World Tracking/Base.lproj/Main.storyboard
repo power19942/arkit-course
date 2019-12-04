@@ -18,12 +18,25 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ib-FV-vbk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fob-P4-MDX">
+                                <rect key="frame" x="20" y="812" width="50" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cpm-Nf-shf"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addCar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZBZ-Tt-C6y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3dX-87-hlT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fob-P4-MDX" secondAttribute="bottom" constant="20" id="Fgw-u9-YOR"/>
                             <constraint firstAttribute="bottom" secondItem="2Ib-FV-vbk" secondAttribute="bottom" id="g7I-yT-HGs"/>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gB6-cZ-xJQ"/>
+                            <constraint firstItem="fob-P4-MDX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="heQ-eh-vak"/>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rhx-Iu-vUD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
