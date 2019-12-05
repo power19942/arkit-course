@@ -18,10 +18,55 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ib-FV-vbk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-bC-iND">
+                                <rect key="frame" x="119.5" y="74" width="175.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDq-JI-qUy">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="20.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plO-17-lrn">
+                                        <rect key="frame" x="92" y="0.0" width="11.5" height="20.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj1-6X-9ah">
+                                        <rect key="frame" x="128.5" y="0.0" width="11" height="20.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf4-MK-4AU">
+                                        <rect key="frame" x="164.5" y="0.0" width="11" height="20.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U17-oM-AsC">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Bnw-nw-6fE"/>
+                                    <constraint firstAttribute="width" constant="40" id="vxC-dH-ygu"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3dX-87-hlT"/>
+                            <constraint firstItem="Z1b-bC-iND" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EQ3-nE-JzL"/>
+                            <constraint firstItem="U17-oM-AsC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IX5-Te-YGb"/>
+                            <constraint firstItem="Z1b-bC-iND" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="PMw-Km-UpD"/>
+                            <constraint firstItem="U17-oM-AsC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="etk-zY-hig"/>
                             <constraint firstAttribute="bottom" secondItem="2Ib-FV-vbk" secondAttribute="bottom" id="g7I-yT-HGs"/>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gB6-cZ-xJQ"/>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rhx-Iu-vUD"/>
@@ -29,7 +74,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="scene" destination="2Ib-FV-vbk" id="iZ1-3T-Ioc"/>
+                        <outlet property="distance" destination="eDq-JI-qUy" id="yQZ-DT-FdM"/>
+                        <outlet property="scenView" destination="2Ib-FV-vbk" id="rGc-cZ-Oyq"/>
+                        <outlet property="xLabel" destination="plO-17-lrn" id="dkp-p8-fDt"/>
+                        <outlet property="yLabel" destination="gj1-6X-9ah" id="b7H-DP-Pcq"/>
+                        <outlet property="zLabel" destination="Gf4-MK-4AU" id="lV3-pj-HJa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -37,4 +86,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="24" height="24"/>
+    </resources>
 </document>
