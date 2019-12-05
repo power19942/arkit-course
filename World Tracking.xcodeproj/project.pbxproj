@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0946199123992D340085F951 /* Portal.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0946199023992D330085F951 /* Portal.scnassets */; };
 		098B413D2393C822007ED836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B413C2393C822007ED836 /* AppDelegate.swift */; };
 		098B413F2393C822007ED836 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B413E2393C822007ED836 /* SceneDelegate.swift */; };
 		098B41412393C822007ED836 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B41402393C822007ED836 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0946199023992D330085F951 /* Portal.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Portal.scnassets; sourceTree = "<group>"; };
 		098B41392393C822007ED836 /* World Tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Tracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		098B413C2393C822007ED836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		098B413E2393C822007ED836 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				098B41452393C825007ED836 /* Assets.xcassets */,
 				098B41472393C825007ED836 /* LaunchScreen.storyboard */,
 				098B414A2393C825007ED836 /* Info.plist */,
+				0946199023992D330085F951 /* Portal.scnassets */,
 			);
 			path = "World Tracking";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0946199123992D340085F951 /* Portal.scnassets in Resources */,
 				098B41492393C825007ED836 /* LaunchScreen.storyboard in Resources */,
 				098B41462393C825007ED836 /* Assets.xcassets in Resources */,
 				098B41442393C822007ED836 /* Main.storyboard in Resources */,

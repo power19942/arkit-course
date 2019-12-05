@@ -18,10 +18,19 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ib-FV-vbk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plane Detected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uee-UK-deo">
+                                <rect key="frame" x="144.5" y="84" width="125" height="21"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="uee-UK-deo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2pR-Rx-Vee"/>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3dX-87-hlT"/>
+                            <constraint firstItem="uee-UK-deo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="bZK-2A-9aX"/>
                             <constraint firstAttribute="bottom" secondItem="2Ib-FV-vbk" secondAttribute="bottom" id="g7I-yT-HGs"/>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gB6-cZ-xJQ"/>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rhx-Iu-vUD"/>
@@ -29,6 +38,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="planeLabel" destination="uee-UK-deo" id="RgD-dL-qNu"/>
                         <outlet property="scene" destination="2Ib-FV-vbk" id="iZ1-3T-Ioc"/>
                     </connections>
                 </viewController>
