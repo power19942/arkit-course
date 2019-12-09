@@ -18,10 +18,25 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ib-FV-vbk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTN-pU-zOZ">
+                                <rect key="frame" x="195" y="436" width="24" height="24"/>
+                                <state key="normal" image="plus"/>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plane Detected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEJ-J2-2HR">
+                                <rect key="frame" x="128.5" y="84" width="157.5" height="26.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3dX-87-hlT"/>
+                            <constraint firstItem="UEJ-J2-2HR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B9b-I7-Rbc"/>
+                            <constraint firstItem="UEJ-J2-2HR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="L2o-Bc-Shu"/>
+                            <constraint firstItem="mTN-pU-zOZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OA8-qY-Alh"/>
+                            <constraint firstItem="mTN-pU-zOZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U2D-DH-UpQ"/>
                             <constraint firstAttribute="bottom" secondItem="2Ib-FV-vbk" secondAttribute="bottom" id="g7I-yT-HGs"/>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gB6-cZ-xJQ"/>
                             <constraint firstItem="2Ib-FV-vbk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rhx-Iu-vUD"/>
@@ -29,7 +44,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="scene" destination="2Ib-FV-vbk" id="iZ1-3T-Ioc"/>
+                        <outlet property="planeDetected" destination="UEJ-J2-2HR" id="e62-iZ-XnD"/>
+                        <outlet property="sceneView" destination="2Ib-FV-vbk" id="zMU-e3-U0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -37,4 +53,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" width="24" height="24"/>
+    </resources>
 </document>
